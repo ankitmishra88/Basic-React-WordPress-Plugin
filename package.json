@@ -1,0 +1,25 @@
+{
+  "name": "custom-quiz-sessions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preview": "npm-run-all --parallel sync start",
+    "sync": "browser-sync start -p localhost/sandbox --files '**/*.php' 'build/*.js' 'build/*.css'",
+    "build": "wp-scripts build src/index.js src/results.js",
+    "start": "wp-scripts start src/index.js src/results.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^17.0.0",
+    "browser-sync": "^2.27.4",
+    "npm-run-all": "^4.1.5"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "antd": "^4.16.13",
+    "axios": "^0.24.0"
+  }
+}
